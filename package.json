@@ -1,0 +1,15 @@
+{
+    "name": "finance-app",
+    "workspaces": [
+        "nest",
+        "native"
+    ],
+    "scripts": {
+        "start": "concurrently \"npm run start:nest\" \"npm run start:native\"",
+        "start:nest": "npm --workspace=nest run start",
+        "start:native": "npm --workspace=native start"
+    },
+    "dependencies": {
+        "concurrently": "^9.1.2"
+    }
+}
